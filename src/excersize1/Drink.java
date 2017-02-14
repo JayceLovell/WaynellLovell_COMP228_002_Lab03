@@ -9,14 +9,16 @@ package excersize1;
  */
 public abstract class Drink {
 	
-	protected String type;
-	protected String size;
+	private String typeofdrink;
+	private String size;
+	protected String togo;
+	private String iced;
 	
-	public String getType() {
-		return type;
+	public String getTypeofdrink() {
+		return typeofdrink;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setTypeofdrink(String type) {
+		this.typeofdrink = type;
 	}
 	public String getSize() {
 		return size;
@@ -24,12 +26,26 @@ public abstract class Drink {
 	public void setSize(String size) {
 		this.size = size;
 	}
-	/* 
-	 * 
+	/**
+	 * @return the iced
+	 */
+	public String getIced() {
+		return iced;
+	}
+	/**
+	 * @param iced the iced to set
+	 */
+	public void setIced(String iced) {
+		this.iced = iced;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "type=" + type + ", size=" + size;
+		return "TypeOfDrink: " + typeofdrink + 
+				"\nSize: " + size + 
+				"\nTogo: " + togo +
+				"\nIced: " + iced+" ";
 	}
-
 }
