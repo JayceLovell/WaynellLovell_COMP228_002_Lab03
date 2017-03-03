@@ -37,7 +37,7 @@ public class Plane extends FootPrint {
 	@Override
 	public String toString() {
 		return super.toString()+
-				"/nAmount of Passengers: "+amountOfPassengers+
-				"/nMiles Traveled: "+ milestraveled;
+				"\nAmount of Passengers: "+amountOfPassengers+
+				"\nMiles Traveled: "+ milestraveled;
 	}
 }
