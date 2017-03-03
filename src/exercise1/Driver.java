@@ -1,7 +1,7 @@
 /**
  * 
  */
-package excersize1;
+package exercise1;
 
 import java.util.ArrayList;
 
