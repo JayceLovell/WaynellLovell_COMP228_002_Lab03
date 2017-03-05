@@ -20,30 +20,26 @@ public class Driver {
 		// TODO Auto-generated method stub
 		ArrayList<CarbonFootprint> carbonfootprint=new ArrayList<CarbonFootprint>();
 		Car car = new Car();
-		car.setName("Car");
-		car.setMilesDriven(2000);
-		car.setGallons(100);
-		car.setFuelEfficency(100);
+		car.setName(JOptionPane.showInputDialog("Name of Car"));
+		car.setMilesDriven(Integer.parseInt(JOptionPane.showInputDialog("Miles Driven in car")));
+		car.setGallons(Integer.parseInt(JOptionPane.showInputDialog("Gallons Car take.")));
+		car.setFuelEfficency(Integer.parseInt(JOptionPane.showInputDialog("Car fuel effiency")));
 		car.setCarbondioxide(100);
 		car.getFootPrint();
 		
-		Plane plane = new Plane();
-		plane.setName("Plane");
-		plane.setMilestraveled(2500);
-		plane.setGallons(100);
-		plane.setCarbondioxide(100);
-		plane.setAmountOfPassengers(100);
-		plane.getFootPrint();
+		Building building = new Building();
+		building.setName(JOptionPane.showInputDialog("Name of Building."));
+		building.setAmountOfElectricity(Integer.parseInt(JOptionPane.showInputDialog("Amount of Electricity Building uses")));
+		building.getFootPrint();
 		
-		House house = new House();
-		house.setName("House");
-		house.setNumberOfPeople(4);
-		house.setAmountOfElectricity(1400);
-		house.getFootPrint();
+		Bicycle bicycle = new Bicycle();
+		bicycle.setName(JOptionPane.showInputDialog("Name of Bicycle."));
+		bicycle.setDistanceRode(Integer.parseInt(JOptionPane.showInputDialog("Distance rode on Bicycle.")));;
+		bicycle.getFootPrint();
 		
 		carbonfootprint.add(car);
-		carbonfootprint.add(plane);
-		carbonfootprint.add(house);
+		carbonfootprint.add(building);
+		carbonfootprint.add(bicycle);
 		PrintCarbonFootprint(carbonfootprint);
 		
 	}

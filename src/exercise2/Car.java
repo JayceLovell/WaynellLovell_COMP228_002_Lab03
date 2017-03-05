@@ -34,6 +34,7 @@ public class Car extends FootPrint {;
 	public void setGallons(int gallons) {
 		this.gallons = gallons;
 	}
+	//I don't know these things are correct i searched and searched and end up with this stuff from People.....eh
 	@Override
 	public void getFootPrint(){
 		carbonFootPrint = ((milesDriven/FuelEfficency)*(19.36/(carbondioxide/gallons)))/2204.6;

@@ -1,16 +1,7 @@
 package exercise2;
 
-public class House extends FootPrint {
-	private int numberOfPeople;
+public class Building extends FootPrint {
 	private int amountOfElectricity;
-	
-	public int getNumberOfPeople() {
-		return numberOfPeople;
-	}
-
-	public void setNumberOfPeople(int numberOfPeople) {
-		this.numberOfPeople = numberOfPeople;
-	}
 
 	public int getAmountOfElectricity() {
 		return amountOfElectricity;
@@ -19,15 +10,14 @@ public class House extends FootPrint {
 	public void setAmountOfElectricity(int amountOfElectricity) {
 		this.amountOfElectricity = amountOfElectricity;
 	}
-
+	//I don't know these things are correct i searched and searched and end up with this stuff from People.....eh
 	@Override
 	public void getFootPrint(){
-		carbonFootPrint = (amountOfElectricity/numberOfPeople)*365*(1.486)/2204.6;
+		carbonFootPrint = amountOfElectricity*0.680389;
 	}
 	@Override
 	public String toString() {
 		return super.toString()+
-				"\nNumber Of Residence: "+numberOfPeople+
 				"\nAmount Of Electricity: "+amountOfElectricity;
 	}
 }
