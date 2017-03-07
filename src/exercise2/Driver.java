@@ -20,7 +20,6 @@ public class Driver {
 		// TODO Auto-generated method stub
 		ArrayList<CarbonFootprint> carbonfootprint=new ArrayList<CarbonFootprint>();
 		Car car = new Car();
-		car.setName(JOptionPane.showInputDialog("Name of Car"));
 		car.setMilesDriven(Integer.parseInt(JOptionPane.showInputDialog("Miles Driven in car")));
 		car.setGallons(Integer.parseInt(JOptionPane.showInputDialog("Gallons Car take.")));
 		car.setFuelEfficency(Integer.parseInt(JOptionPane.showInputDialog("Car fuel effiency")));
@@ -28,12 +27,10 @@ public class Driver {
 		car.getFootPrint();
 		
 		Building building = new Building();
-		building.setName(JOptionPane.showInputDialog("Name of Building."));
 		building.setAmountOfElectricity(Integer.parseInt(JOptionPane.showInputDialog("Amount of Electricity Building uses")));
 		building.getFootPrint();
 		
 		Bicycle bicycle = new Bicycle();
-		bicycle.setName(JOptionPane.showInputDialog("Name of Bicycle."));
 		bicycle.setDistanceRode(Integer.parseInt(JOptionPane.showInputDialog("Distance rode on Bicycle.")));;
 		bicycle.getFootPrint();
 		

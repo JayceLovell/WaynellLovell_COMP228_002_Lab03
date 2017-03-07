@@ -1,15 +1,12 @@
 package exercise2;
 
-public class Car extends FootPrint {;
+public class Car implements CarbonFootprint {;
 	private int milesDriven;
 	private int FuelEfficency;
 	private int carbondioxide;
 	private int gallons;
+	private double carbonFootPrint;
 	
-	public Car()
-	{
-		
-	}
 	public int getMilesDriven() {
 		return milesDriven;
 	}
@@ -34,14 +31,13 @@ public class Car extends FootPrint {;
 	public void setGallons(int gallons) {
 		this.gallons = gallons;
 	}
+	
 	//I don't know these things are correct i searched and searched and end up with this stuff from People.....eh
-	@Override
 	public void getFootPrint(){
 		carbonFootPrint = ((milesDriven/FuelEfficency)*(19.36/(carbondioxide/gallons)))/2204.6;
 	}
-	@Override
 	public String toString() {
-		return super.toString()+
+		return "Carbon Footprint: "+carbonFootPrint+
 				"\nMileage: " + milesDriven + 
 				"\nFuelEfficency: " + FuelEfficency;
 	}

@@ -7,8 +7,9 @@ package exercise2;
  * @author Waynell Lovell
  *
  */
-public class Bicycle extends FootPrint {
+public class Bicycle implements CarbonFootprint {
 	private int distanceRode;
+	protected double carbonFootPrint;
 	
 	public int getDistanceRode() {
 		return distanceRode;
@@ -17,13 +18,11 @@ public class Bicycle extends FootPrint {
 		this.distanceRode = distanceRode;
 	}
 	//I don't know these things are correct i searched and searched and end up with this stuff from People.....eh
-	@Override
 	public void getFootPrint(){
 		carbonFootPrint=distanceRode*21;
 	}
-	@Override
 	public String toString() {
-		return super.toString()+
+		return "Carbon Footprint: "+carbonFootPrint+
 				"\nDistance Rode on Bicycle: "+distanceRode
 				;
 	}

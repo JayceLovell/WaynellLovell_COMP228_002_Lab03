@@ -1,7 +1,8 @@
 package exercise2;
 
-public class Building extends FootPrint {
+public class Building implements CarbonFootprint {
 	private int amountOfElectricity;
+	private double carbonFootPrint;
 
 	public int getAmountOfElectricity() {
 		return amountOfElectricity;
@@ -11,13 +12,12 @@ public class Building extends FootPrint {
 		this.amountOfElectricity = amountOfElectricity;
 	}
 	//I don't know these things are correct i searched and searched and end up with this stuff from People.....eh
-	@Override
 	public void getFootPrint(){
 		carbonFootPrint = amountOfElectricity*0.680389;
 	}
-	@Override
+	
 	public String toString() {
-		return super.toString()+
+		return "Carbon Footprint : "+carbonFootPrint+
 				"\nAmount Of Electricity: "+amountOfElectricity;
 	}
 }
